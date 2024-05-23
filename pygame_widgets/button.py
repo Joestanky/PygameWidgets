@@ -334,7 +334,7 @@ class ButtonArray(WidgetBase):
                 x = self._x + i * (width + self.separationThickness) + self.leftBorder
                 y = self._y + j * (height + self.separationThickness) + self.topBorder
                 self.buttons.append(Button(self.win, x, y, width, height, isSubWidget=True,
-                                           **{k: v[count] for k, v in self.buttonAttributes.items() if v is not None})
+                                           **{k: v for k, v in self.buttonAttributes.items() if v is not None})
                                     )
                 count += 1
 
